@@ -10,7 +10,7 @@
  *
  * This is useful when using routing frameworks like Backbone.js or Path.js.
  *
- * See [readme url] for documentation.
+ * See https://github.com/BenConstable/pathbuilderjs/ for documentation.
  */
 function PathBuilder() {
 
