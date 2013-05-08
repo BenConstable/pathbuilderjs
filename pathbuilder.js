@@ -66,6 +66,8 @@ function PathBuilder() {
 
     /*
      * Set or get a parameter.
+     *
+     * Set value to `false` to remove key.
      */
     this.param = function (key, value) {
         if (arguments.length === 1) {
@@ -83,11 +85,17 @@ function PathBuilder() {
             if (indices.length) {
                 for (var i = 0; i < indices.length; i++) {
                     if ((indices[i] % 2) === 0) {
-                        _path.splice(indices[i] + 1, 1, value);
+                        if (value !== false) {
+                            _path.splice(indices[i] + 1, 1, value);
+                        } else {
+                            _path.splice(indices[i], 2);
+                        }
                     }
                 }
             } else {
-                _path.push(key, value);
+                if (value !== false) {
+                    _path.push(key, value);
+                }
             }
 
             _cachedObject = undefined;

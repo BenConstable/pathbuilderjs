@@ -81,6 +81,8 @@ pb.path(); // "/search/categories/hairy/query/hello+there/"
 
 Set or get a parameter in the path.
 
+Set `value` to `false` to remove `key`.
+
 ```js
 pb.param('first', 'the-first');
 pb.param('second', 'the-second');
