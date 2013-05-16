@@ -1,11 +1,14 @@
 {
     "name": "pathbuilder",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "Easily modify parameters in paths.",
     "keywords": [
         "path",
         "parameters",
-        "params"
+        "params",
+        "url",
+        "route",
+        "routing"
     ],
     "main": "pathbuilder.js",
     "repository": "git@github.com:BenConstable/pathbuilderjs.git",

@@ -217,7 +217,7 @@ function PathBuilder() {
 
 
 
-PathBuilder.VERSION = '0.1.0';
+PathBuilder.VERSION = '0.2.0';
 
 
 
