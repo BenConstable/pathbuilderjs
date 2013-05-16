@@ -107,9 +107,16 @@ pb.path(); // "/query/hello+there/categories/hairy/"
 Set or get the path prefix. Anything after the `.prefix()` will be considered
 to be the parameters.
 
+**Note:** If you set a prefix the path *must* contain it, otherwise an error
+will be thrown.
+
 ```js
 pb.prefix('/search/');
 pb.prefix(); // "/search/"
+
+// This will throw an error
+pb.prefix('/search/')
+pb.path('/first/the-first/second/the-second/');
 ```
 
 ### .toObject()

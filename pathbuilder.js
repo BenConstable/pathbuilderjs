@@ -186,8 +186,12 @@ function PathBuilder() {
      * Set the path.
      */
     function _setPath(path) {
-        if (path.indexOf(_prefix) === 0) {
-            path = path.substring(_prefix.length);
+        if (_prefix.length) {
+            if (path.indexOf(_prefix) === 0) {
+                path = path.substring(_prefix.length);
+            } else {
+                throw new Error('Prefix set, but could not be found in path');
+            }
         }
 
         _hasLeadingDelimiter =
